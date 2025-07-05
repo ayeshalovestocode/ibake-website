@@ -5,282 +5,407 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iBake - Cake Ordering ♡𓇋</title>
   <style>
-    body {
-      font-family: "Poppins", Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: rgb(252, 237, 232);
-      color: rgb(166, 95, 139);
-      scroll-behavior: smooth;
-    }
-      #mainbg{
+  
+
+  body {
+    font-family: "Poppins", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(252, 237, 232);
+    color: rgb(166, 95, 139);
+    scroll-behavior: smooth;
+  }
+
+  #line {
+    margin-top: 15%;
+  }
+
+  #mainbg {
     background-image: url(ooo.jpg);
     background-attachment: fixed;
   }
-   .mainpgs{
+
+  .mainpgs {
     height: 100vh;
     width: 100%;
-    /* border: 2px solid red;   */
   }
-  #showbg{
-  height: 70vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: rgb(166, 95, 139);
-      position: fixed;
-      width: 98%;
-      z-index: 999;
-      padding: 8px 15px;
-    }
-    
 
-    nav img {
-      height: 40px;
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li {
-      margin-left: 10px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 1.3rem;
-      padding: 5px 10px;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
-    }
-    nav ul li a:hover,
-    nav ul li a.active {
-      background-color: #ff8fab;
-    }
-    #logomain
-    {
-      height: 200px;
-      width: 200px;
-    }
-    section {
-      width: 90%;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 70px 0 40px;
-    }
-    #home {
-      height: 90vh;
-      background: url("placeholder-home.jpg") no-repeat center center/cover;
-      text-align: center;
-      color: rgb(160, 19, 66);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-    #home h1 {
-      font-size: 3rem;
-    }
-    #home p {
-      font-size: 2rem;
-      max-width: 800px;
-      margin: 18px auto;
-      color: #360420;
-      font-weight: bold;
-    }
-    #about, #highquality, #menu, #contact {
-      background-color: #f5e1f7;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-    .about-content, .highquality-content {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .about-text, .highquality-text {
-      flex: 1 1 45%;
-      padding: 20px;
-    }
-    .about-image, .highquality-image {
-      margin-right: 7%;
-      margin-left: 4%;
-      margin-bottom: 3%;
-      background: url("placeholder-about.jpg") no-repeat center center/cover;
-      height: 250px;
-      width: 350px;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    #abtimg 
-    { height: 250px;
-      width: 350px;
-    }
-    #logoimg{
-      height: 250px;
-      width: 250px;
-    }
-    .about-text h2, .highquality-text h2 {
-      font-size: 1.8rem;
-      color: rgb(166, 95, 139);
-    }
-    .about-text p, .highquality-text p {
-      color: rgb(57, 75, 104);
-      font-size: 1rem;
-    }
-    #fullscreen-gap {
-      height: 100vh;
-      background-color: #fce9f1;
-    }
-    #menu h2 {
-      text-align: center;
-      color: rgb(166, 95, 139);
-      margin-bottom: 20px;
-      font-size: 1.8rem;
-    }
-    .menu-category {
-      margin-bottom: 30px;
-    }
-    .menu-category h3 {
-      color: #ff8fab;
-      border-bottom: 2px solid #f5e1f7;
-      padding-bottom: 5px;
-      font-size: 1.3rem;
-    }
-    .menu-item {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .menu-content {
-      display: flex;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      overflow: hidden;
-      width: 95%;
-      max-width: 850px;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .menu-image {
-      flex: 1 1 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #fff8f5;
-    }
-    .menu-image img {
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-    .menu-description {
-      flex: 1 1 300px;
-      padding: 15px;
-    }
-    .menu-description h4 {
-      margin: 0;
-      color: rgb(166, 95, 139);
-      font-size: 1.4rem;
-    }
-    .menu-description p {
-      margin: 8px 0;
-      color: rgb(57, 75, 104);
-      font-size: 1rem;
-    }
-    .price {
-      font-weight: bold;
-      color: rgb(166, 95, 139);
-      margin-top: 10px;
-      font-size: 1.1rem;
-    }
-    .custom-cakes-images {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .custom-cakes-images img {
-      width: 400px;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    #custom-flavours {
-      margin-top: 15px;
-      font-style: italic;
-      color: rgb(100, 50, 70);
-      text-align: center;
-    }
-    #contact {
-      text-align: center;
-      padding: 30px 10px;
-    }
-    #contact h2 {
-      color: rgb(166, 95, 139);
-      font-size: 1.7rem;
-    }
-    .contact-btn {
-      display: inline-block;
-      background-color: #ff8fab;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 25px;
-      margin: 8px;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .contact-btn:hover {
-      background-color: #e2769b;
-      transform: translateY(-3px);
-    }
-    footer {
-      background-color: rgb(166, 95, 139);
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-    }
-    @media (max-width: 768px) {
-      .menu-content {
-        flex-direction: column;
-        align-items: center;
-      }
-      .menu-image img {
-        width: 250px;
-        height: 250px;
-      }
-      .custom-cakes-images img {
-        width: 90%;
-        height: auto;
-      }
-    }
+  #showbg {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ✅ Navbar for Desktop */
+  nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(166, 95, 139);
+  position: fixed;
+  width:98%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%; /* Full width always */
+  z-index: 999;
+  padding: 8px 15px;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+
+  nav img {
+    height: 40px;
+  }
+  /* ✅ Hamburger Menu base (hidden by default) */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin-left: 10px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: #ff8fab;
+  }
+
+  #logomain {
+    height: 200px;
+    width: 200px;
+  }
+
+  section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 70px 0 40px;
+  }
+
+  #home {
+    height: 90vh;
+    background: url("placeholder-home.jpg") no-repeat center center/cover;
+    text-align: center;
+    color: rgb(160, 19, 66);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #home h1 {
+    font-size: 3rem;
+  }
+
+  #home p {
+    font-size: 2rem;
+    max-width: 800px;
+    margin: 18px auto;
+    color: #360420;
+    font-weight: bold;
+  }
+
+  #about, #highquality, #menu, #contact {
+    background-color: #f5e1f7;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .about-content, .highquality-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about-text, .highquality-text {
+    flex: 1 1 45%;
+    padding: 20px;
+  }
+
+  .about-image, .highquality-image {
+    margin-right: 7%;
+    margin-left: 4%;
+    margin-bottom: 3%;
+    background: url("placeholder-about.jpg") no-repeat center center/cover;
+    height: 250px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  #abtimg {
+    height: 250px;
+    width: 350px;
+  }
+
+  #logoimg {
+    height: 250px;
+    width: 250px;
+  }
+
+  .about-text h2, .highquality-text h2 {
+    font-size: 1.8rem;
+    color: rgb(166, 95, 139);
+  }
+
+  .about-text p, .highquality-text p {
+    color: rgb(57, 75, 104);
+    font-size: 1rem;
+  }
+
+  #fullscreen-gap {
+    height: 100vh;
+    background-color: #fce9f1;
+  }
+
+  #menu h2 {
+    text-align: center;
+    color: rgb(166, 95, 139);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+
+  .menu-category {
+    margin-bottom: 30px;
+  }
+
+  .menu-category h3 {
+    color: #ff8fab;
+    border-bottom: 2px solid #f5e1f7;
+    padding-bottom: 5px;
+    font-size: 1.3rem;
+  }
+
+  .menu-item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .menu-content {
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 95%;
+    max-width: 850px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .menu-image {
+    flex: 1 1 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff8f5;
+  }
+
+  .menu-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .menu-description {
+    flex: 1 1 300px;
+    padding: 15px;
+  }
+
+  .menu-description h4 {
+    margin: 0;
+    color: rgb(166, 95, 139);
+    font-size: 1.4rem;
+  }
+
+  .menu-description p {
+    margin: 8px 0;
+    color: rgb(57, 75, 104);
+    font-size: 1rem;
+  }
+
+  .price {
+    font-weight: bold;
+    color: rgb(166, 95, 139);
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+
+  .custom-cakes-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .custom-cakes-images img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  #custom-flavours {
+    margin-top: 15px;
+    font-style: italic;
+    color: rgb(100, 50, 70);
+    text-align: center;
+  }
+
+  #contact {
+    text-align: center;
+  padding: 30px 10px;
+  padding-bottom: 80px; /* ✅ Added extra space at the bottom */
+  }
+
+  #contact h2 {
+    color: rgb(166, 95, 139);
+    font-size: 1.7rem;
+  }
+
+  .contact-btn {
+    display: inline-block;
+    background-color: #ff8fab;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .contact-btn:hover {
+    background-color: #e2769b;
+    transform: translateY(-3px);
+  }
+
+  footer {
+    background-color: rgb(166, 95, 139);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+
+.hamburger {
+  display: block; /* force show */
+  font-size: 2.5rem; /* make it bigger for testing */
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001; /* sit on top of nav */
+  position: relative; /* ensure no overlap issues */
+}
+
+
+
+ @media (max-width: 768px) {
+  nav {
+    width: 100%; /* Full width nav */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Logo on left, hamburger on right */
+    align-items: center;
+    padding: 8px 10px;
+  }
+   body {
+    background-color: pink !important;
+  }
+
+  .hamburger {
+    display: block; /* ✅ Show hamburger */
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 55px; /* adjust dropdown position */
+  right: 1%; /* align with the navbar’s edge */
+  background-color: rgb(166, 95, 139);
+  border-radius: 8px;
+  width: 200px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000; /* make sure it's on top */
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: right;
+  }
+
+  .menu-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .custom-cakes-images img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+
+</style>
+
+
   </style>
 </head>
 <body>
   <div id="mainbg">
-    <nav class="navbar">
-    <a href="#home"><img src="logo.png" alt="iBake Logo"></a>
-    <ul>
-      <li><a href="#home" >Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#menu">Menu</a></li>
-       <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+ <nav class="navbar">
+  <a href="#home"><img src="logo.png" alt="iBake Logo"></a>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <ul id="navLinks" class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
 
   <section id="home">
     <img src="logo.png" id="logomain"alt="">
@@ -311,6 +436,8 @@
   
   
 <div class="mainpgs"  id="showbg">
+  <div id="line">𝓔𝓿𝓮𝓻𝔂 𝓫𝓲𝓽𝓮 𝓸𝓯 𝓸𝓾𝓻 𝓬𝓪𝓴𝓮𝓼 𝓲𝓼 𝓪 𝓵𝓲𝓽𝓽𝓵𝓮 𝓹𝓲𝓮𝓬𝓮 𝓸𝓯 𝓱𝓮𝓪𝓿𝓮𝓷, 𝓫𝓪𝓴𝓮𝓭 𝔀𝓲𝓽𝓱 𝓵𝓸𝓿𝓮 𝓪𝓷𝓭 𝓵𝓪𝔂𝓮𝓻𝓮𝓭 𝔀𝓲𝓽𝓱 𝓱𝓪𝓹𝓹𝓲𝓷𝓮𝓼𝓼 𝓽𝓸 𝓶𝓪𝓴𝓮 𝔂𝓸𝓾𝓻 𝓶𝓸𝓶𝓮𝓷𝓽𝓼 𝓼𝔀𝓮𝓮𝓽𝓮𝓻</div>
+
 </div>
 
   <section id="menu">
@@ -443,7 +570,7 @@
 
     <!-- View Full Menu Button -->
     <div style="text-align: center; margin-top: 30px;">
-      <a href="menu.pdf" target="_blank" class="contact-btn">
+      <a href="ibake-menu.pdf" target="_blank" class="contact-btn">
         📄 View Full Menu (PDF)
       </a>
     </div>
@@ -483,84 +610,35 @@
   <footer>
     &copy; 2025 iBake - All Rights Reserved
   </footer>
- <script>
-  const reviewForm = document.getElementById("reviewForm");
-  const reviewList = document.getElementById("reviewList");
-
-  // Load saved reviews from localStorage
-  window.addEventListener("DOMContentLoaded", () => {
-    const savedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
-    savedReviews.forEach((review, index) => {
-      displayReview(review.name, review.text, index);
-    });
-  });
-
-  // Function to display a review with delete button
-  function displayReview(name, text, index) {
-    const reviewBox = document.createElement("div");
-    reviewBox.style.backgroundColor = "#fff";
-    reviewBox.style.padding = "15px";
-    reviewBox.style.borderRadius = "8px";
-    reviewBox.style.boxShadow = "0 2px 6px rgba(0,0,0,0.1)";
-    reviewBox.style.marginBottom = "10px";
-    reviewBox.style.position = "relative";
-
-    reviewBox.innerHTML = `
-      <p style="color: rgb(57, 75, 104);">“${text}”</p>
-      <small style="color: rgb(166, 95, 139);">— ${name}</small>
-      <button class="delete-btn" style="
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        background-color: #ff8fab;
-        border: none;
-        border-radius: 50%;
-        color: white;
-        font-size: 16px;
-        width: 25px;
-        height: 25px;
-        cursor: pointer;
-      " title="Delete Review">✖</button>
-    `;
-
-    // Add delete functionality
-    const deleteBtn = reviewBox.querySelector(".delete-btn");
-    deleteBtn.addEventListener("click", () => {
-      deleteReview(index);
-      reviewBox.remove();
-    });
-
-    reviewList.appendChild(reviewBox);
+  <script>
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("show");
   }
-
-  // Delete review from localStorage
-  function deleteReview(index) {
-    const savedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
-    savedReviews.splice(index, 1); // Remove 1 review at position 'index'
-    localStorage.setItem("reviews", JSON.stringify(savedReviews));
-  }
-
-  // Save review on form submit
-  reviewForm.addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent page reload
-
-    const name = document.getElementById("username").value;
-    const review = document.getElementById("userreview").value;
-
-    // Save to localStorage
-    const savedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
-    savedReviews.push({ name, text: review });
-    localStorage.setItem("reviews", JSON.stringify(savedReviews));
-
-    // Display the new review
-    displayReview(name, review, savedReviews.length - 1);
-
-    // Clear form
-    reviewForm.reset();
-  });
 </script>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-database-compat.js"></script>
+
 <script>
-  // Add active class to nav links on scroll
+  // ✅ Your Firebase config
+  const firebaseConfig = {
+    apiKey: "AIzaSyB_kbaiRY65Ap22Faud-tFAQwuXZbuO_70",
+    authDomain: "ibakewebsite-2011c.firebaseapp.com",
+    databaseURL: "https://ibakewebsite-2011c-default-rtdb.firebaseio.com",
+    projectId: "ibakewebsite-2011c",
+    storageBucket: "ibakewebsite-2011c.appspot.com",
+    messagingSenderId: "737120325723",
+    appId: "1:737120325723:web:3d37d633fb18e7fa7aef7e",
+    measurementId: "G-NTC5Y4287D"
+  };
+
+  // ✅ Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
+
+  // ✅ Navbar Active Highlight
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll("nav ul li a");
 
@@ -581,18 +659,106 @@
     });
   });
 
-  // Add smooth scroll and highlight on click
-  navLinks.forEach(link => {
-    link.addEventListener("click", function () {
-      navLinks.forEach(l => l.classList.remove("active"));
-      this.classList.add("active");
+  // ✅ Reviews Submit & Load
+  const reviewForm = document.getElementById("reviewForm");
+  const reviewList = document.getElementById("reviewList");
+
+  // Save review to Firebase
+  reviewForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("username").value.trim();
+    const email = document.getElementById("useremail").value.trim();
+    const review = document.getElementById("userreview").value.trim();
+
+    if (name === "" || email === "" || review === "") {
+      alert("Please fill in all fields!");
+      return;
+    }
+
+    const newReviewRef = database.ref("reviews").push();
+    newReviewRef.set({
+      name: name,
+      email: email,
+      review: review,
+      timestamp: Date.now()
+    }).then(() => {
+      alert("🎉 Thank you for your review!");
+      reviewForm.reset();
+      loadReviews(); // refresh
+    }).catch((error) => {
+      console.error("Error saving review:", error);
+      alert("⚠️ Oops! Something went wrong.");
     });
   });
+
+  // Load reviews
+  function loadReviews() {
+    reviewList.innerHTML = "";
+    database.ref("reviews").once("value").then((snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+        const key = childSnapshot.key; // Get unique key for delete
+        const data = childSnapshot.val();
+        displayReview(key, data.name, data.review);
+      });
+    });
+  }
+
+  // Display one review
+  function displayReview(key, name, text) {
+    const div = document.createElement("div");
+    div.style.backgroundColor = "#fff";
+    div.style.padding = "15px";
+    div.style.borderRadius = "8px";
+    div.style.boxShadow = "0 2px 6px rgba(0,0,0,0.1)";
+    div.style.marginBottom = "10px";
+    div.style.position = "relative";
+
+    div.innerHTML = `
+      <p>"${text}"</p>
+      <small>— ${name}</small>
+      <button onclick="deleteReview('${key}')" 
+        style="
+          position: absolute; 
+          top: 5px; 
+          right: 5px; 
+          background: transparent; 
+          border: none; 
+          font-size: 16px; 
+          cursor: pointer; 
+          color: red;"
+        title="Delete Review">✖</button>
+    `;
+    reviewList.appendChild(div);
+  }
+
+  // Delete a review
+  function deleteReview(key) {
+    if (confirm("Are you sure you want to delete this review?")) {
+      database.ref("reviews/" + key).remove()
+        .then(() => {
+          alert("🗑️ Review deleted.");
+          loadReviews();
+        })
+        .catch((error) => {
+          console.error("Error deleting review:", error);
+          alert("⚠️ Failed to delete review.");
+        });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", loadReviews);
+  // ✅ Hamburger Menu Toggle
+const hamburger = document.querySelector(".hamburger");
+const navLinksContainer = document.querySelector("nav ul");
+
+hamburger.addEventListener("click", () => {
+  navLinksContainer.classList.toggle("show");
+});
+
 </script>
 
 
-
-</div>
 
 </body>
 </html>
